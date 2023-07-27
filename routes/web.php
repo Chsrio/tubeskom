@@ -22,7 +22,8 @@ Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/forecasting', [App\Http\Controllers\ForecastingController::class, 'index'])->name('forecasting');
+    Route::get('/forecasting', [App\Http\Controllers\ForecastingController::class, 'index'])->name('forecasting')->middleware('userAkses:2');
     Route::get('/history', [App\Http\Controllers\historycontroller::class, 'index'])->name('history');
     Route::get('/news', [App\Http\Controllers\newscontroller::class, 'index'])->name('news');
+    Route::get('/pendataan', [App\Http\Controllers\PendataanController::class, 'index'])->name('pendataan')->middleware('userAkses:1');
 });

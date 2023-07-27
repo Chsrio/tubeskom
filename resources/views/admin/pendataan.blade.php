@@ -3,7 +3,7 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>Forecasting</h1>
+            <h1>Pendataan Pekerjaan Alumni</h1>
         </div>
         <div class="section-body">
             <h2 class="section-title">Tambah Data Karang Taruna</h2>
