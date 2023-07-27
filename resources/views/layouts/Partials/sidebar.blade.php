@@ -20,9 +20,9 @@
                         <li><a class="nav-link" href="{{ url('/forecasting') }}"><i class="far fa-address-book"></i>
                                 <span>Forecasting</span></a></li>
 
-                        <li><a class="nav-link" href="blank.html"><i class="fas fa-list"></i>
+                        <li><a class="nav-link" href="{{ url('/history') }}"><i class="fas fa-list"></i>
                                 <span>History Alumni</span></a></li>
-                        <li><a class="nav-link" href="blank.html"><i class="fas fa-newspaper"></i>
+                        <li><a class="nav-link" href="{{ url('news') }}"><i class="fas fa-newspaper"></i>
                                 <span>News</span></a></li>
                 </aside>
             </div>
