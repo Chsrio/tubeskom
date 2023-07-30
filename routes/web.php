@@ -23,7 +23,9 @@ Auth::routes();
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/forecasting', [App\Http\Controllers\ForecastingController::class, 'index'])->name('forecasting')->middleware('userAkses:2');
+    Route::post('/forecasting', [App\Http\Controllers\ForecastingController::class, 'store'])->name('forecasting.store')->middleware('userAkses:2');
     Route::get('/history', [App\Http\Controllers\PendataanController::class, 'create'])->name('history');
+    Route::get('/history/{id}', [App\Http\Controllers\PendataanController::class, 'show'])->name('history.show');
     Route::get('/news', [App\Http\Controllers\newscontroller::class, 'index'])->name('news');
     Route::get('/pendataan', [App\Http\Controllers\PendataanController::class, 'index'])->name('pendataan')->middleware('userAkses:1');
     Route::post('/pendataan', [App\Http\Controllers\PendataanController::class, 'store'])->name('pendataan.store')->middleware('userAkses:1');

@@ -4,31 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\DataAlumni;
 use Illuminate\Http\Request;
-use RealRashid\SweetAlert\Facades\Alert;
 
-class PendataanController extends Controller
+class PredictController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        return view('admin.pendataan');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-       $dataAlumnis = DataAlumni::with('user')->get();
-        return view('other.history', compact('dataAlumnis'));
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+        public function store(Request $request)
     {
         // Convert Nilai Pemograman 
         $nilai_alpro = $this->converter($request->alpro);
@@ -80,21 +59,11 @@ class PendataanController extends Controller
         $rekayasaPerancangan = $this->grade($means_rekayasa);
 
 
-        // Kirimm ke database 
-        DataAlumni::create([
-            'user_id' => auth()->user()->id,
-            'pekerjaan'=> $request->pekerjaan,
-            'Mata Kuliah Pemograman' => $pemograman,
-            'Mata Kuliah Manajemen SI/IT' => $pengolahanData,
-            'Mata Kuliah Data dan Informasi'=> $sistemInformasi,
-            'Mata Kuliah Sistem Informasi'=> $manajemen ,
-            'Mata Kuliah Rekayasa dan Perancangan Sistem Informasi'=> $rekayasaPerancangan,
-        ]);
 
        return redirect()->route('pendataan')->with('success', 'Data Berhasil ditambahkan!');
     }
 
-    private function converter($value){
+       private function converter($value){
         if ($value === 'A') {
             return 5;
         } elseif ($value === 'AB') {
@@ -126,44 +95,5 @@ class PendataanController extends Controller
         } else {
             return 'Tidak Valid';
         }
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        $dataAlumni = DataAlumni::with('user')->find($id);
-
-        if (!$dataAlumni) {
-            // Jika data alumni dengan $id tidak ditemukan, maka tampilkan halaman 404 atau sesuaikan dengan kebutuhan Anda.
-            abort(404);
-        }
-
-        return view('other.history_show', compact('dataAlumni'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
     }
 }
