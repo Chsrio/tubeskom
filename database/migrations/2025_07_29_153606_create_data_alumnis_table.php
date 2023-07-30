@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->string('pekerjaan');
-            $table->text('Deskripsi');
             $table->string('Mata Kuliah Pemograman');
             $table->string('Mata Kuliah Manajemen SI/IT');
             $table->string('Mata Kuliah Data dan Informasi');
