@@ -29,6 +29,7 @@ class UserFactory extends Factory
             'role_id' => function () {
                 return \App\Models\Role::inRandomOrder()->first()->id;
             },
+            'profile_picture' => $this->faker->image('public/images', 200, 200, null, false), // Menggenerate URL gambar profil palsu
             'remember_token' => Str::random(10), 
             'created_at' => now(),
             'updated_at' => now(),

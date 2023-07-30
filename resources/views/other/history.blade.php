@@ -11,7 +11,8 @@
                 <div class="card author-box card-primary">
                     <div class="card-body">
                         <div class="author-box-left">
-                            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle author-box-picture">
+                            <img alt="image" src="../assets/img/avatar/avatar-1.png"
+                                class="rounded-circle author-box-picture">
                         </div>
                         <div class="author-box-details">
                             <div class="author-box-name">
@@ -22,7 +23,7 @@
                             </div>
                         </div>
                         <div class="float-right mt-sm-0 mt-3">
-                            <a href="#">Detail >></a>
+                            <a href="{{ route('history.show', $data->id) }}">Detail >></a>
                         </div>
                     </div>
                 </div>

@@ -39,6 +39,8 @@
                 </div>
             </footer>
         </div>
+
+        @include('sweetalert::alert')
     </div>
 
     <!-- General JS Scripts -->

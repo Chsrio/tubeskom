@@ -16,13 +16,12 @@
                     <form action="{{ route('pendataan') }}" method="POST">
                         @csrf
                         <div class="row">
-                            \
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>Pekerjaan</label>
                                     <select class="form-control" name="pekerjaan" required>
                                         <option>Data Analyst</option>
-                                        <option>Software Enginering</option>
+                                        <option>Programmer</option>
                                         <option>IT Consultant</option>
                                         <option>ERP Consultant</option>
                                         <option>Manager Project</option>
@@ -358,7 +357,7 @@
                         {{-- Button --}}
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn btn-icon btn-success" title="Simpan">Prediksi</button>
+                                <button type="submit" class="btn btn-icon btn-success" title="Simpan">Simpan</button>
                             </div>
                         </div>
                     </form>
