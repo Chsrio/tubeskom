@@ -3,7 +3,7 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>Forecasting</h1>
+            <h1>Pendataan Alumni</h1>
         </div>
         <div class="section-body">
             <h2 class="section-title">Prediksi Pekerjaan Menggunakan Nilai</h2>
@@ -13,7 +13,7 @@
                     <h4>Data Nilai</h4>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('pendataan') }}" method="POST">
+                    <form action="{{ route('pendataan.store') }}" method="POST">
                         @csrf
                         <div class="row">
                             <div class="col-12">
@@ -351,8 +351,6 @@
                                 </div>
                             </div>
                         </div>
-
-
 
                         {{-- Button --}}
                         <div class="row">

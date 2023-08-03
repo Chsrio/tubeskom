@@ -20,22 +20,29 @@
                             {{ $dataAlumni->pekerjaan }}
                         </div>
 
-                        <div class="author-box-description">
-                            <ul>
-                                <li>Nilai Mata Kuliah Pemograman : {{ $dataAlumni['Mata Kuliah Pemograman'] }}</li>
-                                <li>Nilai Mata Kuliah Manajemen SI/IT : {{ $dataAlumni['Mata Kuliah Manajemen SI/IT'] }}
-                                </li>
-                                <li>Nilai Mata Kuliah Data dan Informasi :
-                                    {{ $dataAlumni['Mata Kuliah Data dan Informasi'] }}</li>
-                                <li>Nilai Mata Kuliah Sistem Informasi : {{ $dataAlumni['Mata Kuliah Sistem Informasi'] }}
-                                </li>
-                                <li>Nilai Mata Kuliah Rekayasa dan Perancangan Sistem Informasi:
-                                    {{ $dataAlumni['Mata Kuliah Rekayasa dan Perancangan Sistem Informasi'] }}</li>
-                            </ul>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-md mt-3">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">MK Pemograman</th>
+                                        <th scope="col">MK Sistem Informasi</th>
+                                        <th scope="col">MK Manajemen Sistem Informasi</th>
+                                        <th scope="col">MK Pengelolaan Data dan Informasi</th>
+                                        <th scope="col">MK Rekayasa dan Perancangan Sistem Informasi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <td>{{ $dataAlumni['Mata Kuliah Pemograman'] }}</td>
+                                    <td>{{ $dataAlumni['Mata Kuliah Manajemen SI/IT'] }}</td>
+                                    <td>{{ $dataAlumni['Mata Kuliah Data dan Informasi'] }}</td>
+                                    <td>{{ $dataAlumni['Mata Kuliah Sistem Informasi'] }}</td>
+                                    <td>{{ $dataAlumni['Mata Kuliah Rekayasa dan Perancangan Sistem Informasi'] }}</td>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                     <div class="float-right mt-sm-0 mt-3">
-                        <a href="{{ route('history') }}">
+                        <a href="{{ route('history') }}" class="btn btn-danger">
                             << Back</a>
                     </div>
                 </div>
