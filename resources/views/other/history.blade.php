@@ -16,14 +16,19 @@
                         </div>
                         <div class="author-box-details">
                             <div class="author-box-name">
-                                <h3>{{ $data->user->name }}</h3>
+                                <h2>{{ $data->user->name }}</h2>
                             </div>
                             <div class="author-box-job">
                                 {{ $data->pekerjaan }}
                             </div>
+                            <div class="author-box-job">
+                                {{ $data->user->email }}
+                            </div>
+
                         </div>
+
                         <div class="float-right mt-sm-0 mt-3">
-                            <a href="{{ route('history.show', $data->id) }}">Detail >></a>
+                            <a href="{{ route('history.show', $data->id) }}" class="btn btn-info">Detail >></a>
                         </div>
                     </div>
                 </div>
