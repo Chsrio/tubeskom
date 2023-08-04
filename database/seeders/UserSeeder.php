@@ -31,5 +31,8 @@ class UserSeeder extends Seeder
         foreach($userdata as $key => $val){
             User::create($val);
         }
+
+         User::factory(10)->create();
     }
+
 }

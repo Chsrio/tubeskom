@@ -120,9 +120,6 @@ class newscontroller extends Controller
             'tanggal_penutupan' => 'required|date|after_or_equal:tanggal_pembukaan',
         ]);
 
-
-
-
         $dataLoker->update($request->except('berkas_persyaratan'));
 
         // Update berkas persyaratan jika ada yang di-upload
