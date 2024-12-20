@@ -64,7 +64,7 @@
             <div class="row justify-content-center">
                 <div
                     class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                    <h1>CAREER CAST</h1>
+                    <h1>CAREER FORECAST</h1>
                     <h2>Temukan pekerjaan yang sesuai dengan klasifikasi anda di website career cast</h2>
                     <div><a href="https://is.ittelkom-sby.ac.id/" class="btn-get-started scrollto">INFO LEBIH LANJUT</a></div>
                 </div>
